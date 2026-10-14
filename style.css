@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --sg-yellow: #ffd21f;
+  --sg-pink: #ff4d91;
+  --sg-purple: #8060f5;
+  --sg-green: #39d52d;
+  --sg-ink: #101010;
+  --sg-paper: #fffdf8;
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at 7% 13%, rgba(255,77,145,.95) 0 95px, transparent 97px),
+    radial-gradient(circle at 98% 82%, rgba(128,96,245,.95) 0 170px, transparent 172px),
+    var(--sg-yellow);
+  color: var(--sg-ink);
+  font-family: 'Inter', sans-serif;
+}
+
+[data-testid="stHeader"],
+[data-testid="stAppViewContainer"] > .main {
+  background: transparent;
+}
+
+.block-container {
+  max-width: 1180px;
+  padding: 2rem 1.3rem 4rem;
+}
+
+h1, h2, h3, p, label, .stMarkdown,
+[data-testid="stCaptionContainer"] {
+  color: var(--sg-ink);
+  font-family: 'Inter', sans-serif;
+}
+
+h2 {
+  font-weight: 850 !important;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-weight: 800 !important;
+  letter-spacing: -.5px;
+}
+
+p {
+  font-weight: 500;
+}
+
+.sg-hero {
+  margin-bottom: 2rem;
+}
+
+.sg-eyebrow {
+  display: inline-block;
+  background: var(--sg-pink);
+  color: var(--sg-ink);
+  border: 2px solid var(--sg-ink);
+  border-radius: 8px;
+  padding: .35rem .7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .78rem;
+  letter-spacing: 1px;
+  margin-bottom: .9rem;
+  box-shadow: 3px 3px 0 var(--sg-ink);
+}
+
+.sg-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: .98;
+  letter-spacing: -2.8px;
+  margin: .2rem 0 .8rem;
+}
+
+.sg-subtitle {
+  font-size: 1.12rem;
+  font-weight: 600;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.sg-section {
+  background: var(--sg-paper);
+  border: 3px solid var(--sg-ink);
+  border-radius: 18px;
+  box-shadow: 6px 6px 0 var(--sg-ink);
+  padding: 1rem 1.2rem;
+  margin: .7rem 0 1.2rem;
+}
+
+.sg-section span {
+  display: block;
+  margin-top: .35rem;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+  background: var(--sg-paper);
+  border: 3px solid var(--sg-ink) !important;
+  border-radius: 22px !important;
+  box-shadow: 7px 8px 0 var(--sg-ink);
+  padding: 1rem;
+}
+
+div[data-testid="stExpander"] {
+  background: var(--sg-paper);
+  border: 3px solid var(--sg-ink);
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 var(--sg-ink);
+  overflow: hidden;
+}
+
+div[data-testid="stExpander"] summary {
+  font-weight: 750;
+}
+
+.stTextArea textarea,
+.stTextInput input {
+  background: var(--sg-paper) !important;
+  border: 3px solid var(--sg-ink) !important;
+  border-radius: 14px !important;
+  color: var(--sg-ink) !important;
+  box-shadow: 4px 4px 0 var(--sg-ink);
+  font-weight: 500;
+}
+
+[data-testid="stFileUploader"] section {
+  background: var(--sg-paper);
+  border: 3px dashed var(--sg-ink);
+  border-radius: 16px;
+}
+
+.stButton > button,
+.stDownloadButton > button {
+  background: var(--sg-yellow) !important;
+  color: var(--sg-ink) !important;
+  border: 3px solid var(--sg-ink) !important;
+  border-radius: 14px !important;
+  box-shadow: 5px 5px 0 var(--sg-ink);
+  font-weight: 850 !important;
+  min-height: 3.1rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--sg-ink);
+}
+
+[data-testid="stAlert"] {
+  border: 2px solid var(--sg-ink);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 var(--sg-ink);
+  background: var(--sg-paper);
+}
+
+@media (max-width: 700px) {
+  .block-container {
+    padding: 1rem .8rem 3rem;
+  }
+
+  .sg-hero-title {
+    letter-spacing: -1.5px;
+  }
+
+  div[data-testid="stVerticalBlockBorderWrapper"] {
+    box-shadow: 4px 5px 0 var(--sg-ink);
+    padding: .65rem;
+  }
+}
